@@ -1,0 +1,1314 @@
+{
+  "version": "2.6.2",
+  "summary": {
+    "title": "Aurora - Banca Digital",
+    "owner": "Jeffrey Hurtarte",
+    "description": "Plataforma de banca digital que permite a clientes consultar saldos, realizar transferencias y pagar servicios mediante una aplicación web y una aplicación móvil. Los canales se conectan por un API Gateway a servicios de autenticación, cuentas y transacciones. Un middleware de mensajería integra el core bancario y la red ACH. Se apoya en proveedores externos de OTP/SMS y verificación de identidad (KYC).",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "DFD Nivel 0 - Contexto",
+        "diagramType": "STRIDE",
+        "placeholder": "Descripción de nuevo diagrama STRIDE",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": [
+          {
+            "position": {
+              "x": -896.25,
+              "y": 165
+            },
+            "size": {
+              "width": 90,
+              "height": 90
+            },
+            "attrs": {
+              "text": {
+                "text": "P0 -\n Plataforma de \nBanca Digital"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "caaa3da9-bceb-44cb-bc55-a6c8bc2a8a24"
+                },
+                {
+                  "group": "right",
+                  "id": "23ea3a76-1b3d-49c1-8570-3ea3afd149b9"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3d20f02f-5857-4741-bdd6-e657f13ba7fc"
+                },
+                {
+                  "group": "left",
+                  "id": "e437d794-1b2b-45a7-a615-330ca16c17b6"
+                }
+              ]
+            },
+            "id": "b77bb25e-cca8-4557-8a58-eef5c0314aea",
+            "data": {
+              "type": "tm.Process",
+              "name": "P0 -\n Plataforma de \nBanca Digital",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": -1270,
+              "y": 40
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "E1 - Cliente"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 3,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "28c946b3-f36c-448c-89d1-413817aa75a0"
+                },
+                {
+                  "group": "right",
+                  "id": "e98dd13f-71bd-470a-98a8-554350877ad1"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3030ed83-dc9c-44f5-beae-43169aabc8ce"
+                },
+                {
+                  "group": "left",
+                  "id": "87e28e95-a155-4e23-bfd3-dcee316fbfb6"
+                }
+              ]
+            },
+            "id": "1659b09a-f982-4c38-896b-6ef10e197deb",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E1 - Cliente",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "F0-1 Cliente ↔ \nP0 (credenciales, órdenes)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "F0-1 Cliente ↔ \nP0 (credenciales, órdenes)"
+            ],
+            "id": "9314bead-6d0d-48d7-8fd5-a173a35bdc41",
+            "source": {
+              "cell": "1659b09a-f982-4c38-896b-6ef10e197deb",
+              "port": "e98dd13f-71bd-470a-98a8-554350877ad1"
+            },
+            "target": {
+              "cell": "b77bb25e-cca8-4557-8a58-eef5c0314aea",
+              "port": "caaa3da9-bceb-44cb-bc55-a6c8bc2a8a24"
+            },
+            "vertices": [
+              {
+                "x": -950,
+                "y": 80
+              },
+              {
+                "x": -870,
+                "y": 110
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "F0-3 P0 ↔ \nRed ACH (mensajes interbancarios)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "081cd0c8-25b5-4401-a43c-aa6acae05bd7",
+                  "title": "T-21 [Medio] Alteración o suplantación de mensajes con la red ACH",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering / Manipulación",
+                  "description": "Un atacante altera o suplanta mensajes interbancarios.",
+                  "mitigation": "C-11 segmentación; C-15 mensajería firmada, idempotencia y anti-replay",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "4"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "F0-3 P0 ↔ \nRed ACH (mensajes interbancarios)"
+            ],
+            "id": "48b87874-bea3-474e-80a2-8000798c0f40",
+            "source": {
+              "cell": "b77bb25e-cca8-4557-8a58-eef5c0314aea",
+              "port": "23ea3a76-1b3d-49c1-8570-3ea3afd149b9"
+            },
+            "target": {
+              "cell": "7d734fcb-2072-4ab4-bb17-8729694dbb36",
+              "port": "87e28e95-a155-4e23-bfd3-dcee316fbfb6"
+            },
+            "vertices": [
+              {
+                "x": -710,
+                "y": 190
+              },
+              {
+                "x": -630,
+                "y": 110
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "F0-2 Operador → \nP0 (administración y soporte)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "F0-2 Operador → \nP0 (administración y soporte)"
+            ],
+            "id": "9e8f823a-9890-42ae-b20a-ecae82f4347e",
+            "source": {
+              "cell": "830a7642-6064-4f3e-9551-77984b565307",
+              "port": "28c946b3-f36c-448c-89d1-413817aa75a0"
+            },
+            "target": {
+              "cell": "b77bb25e-cca8-4557-8a58-eef5c0314aea",
+              "port": "e437d794-1b2b-45a7-a615-330ca16c17b6"
+            },
+            "vertices": [
+              {
+                "x": -1120,
+                "y": 210
+              },
+              {
+                "x": -960,
+                "y": 210
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "F0-6 P0 → \nRegulador/Auditor (reportes)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ba3024ed-f910-4bd7-8b62-2662adb7a5a4",
+                  "title": "T-24 [Bajo] Reportes de auditoría con PII sin controles",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Los reportes exportados contienen PII sin controles de acceso ni enmascaramiento.",
+                  "mitigation": "C-16 logging con enmascaramiento, exportación segura con control de acceso",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "2"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "F0-6 P0 → \nRegulador/Auditor (reportes)"
+            ],
+            "id": "00a69ee6-515c-4b4c-bec2-e9fce8e14e8e",
+            "source": {
+              "cell": "b77bb25e-cca8-4557-8a58-eef5c0314aea",
+              "port": "3d20f02f-5857-4741-bdd6-e657f13ba7fc"
+            },
+            "target": {
+              "cell": "e77d373c-3f07-4999-922f-19f6d265a940",
+              "port": "28c946b3-f36c-448c-89d1-413817aa75a0"
+            },
+            "vertices": [
+              {
+                "x": -850,
+                "y": 350
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "F0-4 P0 → \nProveedor OTP (solicitud de OTP)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "082ea719-7703-4efa-b17f-0046ee2ffb94",
+                  "title": "T-25 [Bajo] Saturación del proveedor SMS",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Saturación o caída del proveedor impide la entrega de OTP.",
+                  "mitigation": "C-19 gestión de terceros y SLA, C-20 resiliencia",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "1"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 3
+              }
+            },
+            "labels": [
+              "F0-4 P0 → \nProveedor OTP (solicitud de OTP)"
+            ],
+            "id": "cdcb5791-1d80-44e2-a530-08a66f46cc88",
+            "source": {
+              "cell": "b77bb25e-cca8-4557-8a58-eef5c0314aea",
+              "port": "23ea3a76-1b3d-49c1-8570-3ea3afd149b9"
+            },
+            "target": {
+              "cell": "586cd34b-876c-4459-94ef-808860a67870",
+              "port": "87e28e95-a155-4e23-bfd3-dcee316fbfb6"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "F0-5 P0 ↔ \nProveedor KYC (verificación de identidad)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": true,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "946849c8-5a8e-419e-a883-b4361d128d45",
+                  "title": "T-12 [Alto] Brecha en proveedor KYC que expone documentos de identidad",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Un incidente en el proveedor expone documentos de identidad y PII de clientes.",
+                  "mitigation": "C-07 cifrado y tokenización, C-19 evaluación y contratos con el proveedor, minimización de datos enviados",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "8"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "F0-5 P0 ↔ \nProveedor KYC (verificación de identidad)"
+            ],
+            "id": "6d2426e8-0193-4f0f-912b-c96b4a286844",
+            "source": {
+              "cell": "b77bb25e-cca8-4557-8a58-eef5c0314aea",
+              "port": "23ea3a76-1b3d-49c1-8570-3ea3afd149b9"
+            },
+            "target": {
+              "cell": "c8c5d0cb-9b32-4b88-8ee8-3026a1a929d0",
+              "port": "87e28e95-a155-4e23-bfd3-dcee316fbfb6"
+            },
+            "vertices": [
+              {
+                "x": -720,
+                "y": 230
+              },
+              {
+                "x": -680,
+                "y": 280
+              },
+              {
+                "x": -640,
+                "y": 320
+              },
+              {
+                "x": -610,
+                "y": 340
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": -1270,
+              "y": 240
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "E2 - Operador /\n Administrador"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 11,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "28c946b3-f36c-448c-89d1-413817aa75a0"
+                },
+                {
+                  "group": "right",
+                  "id": "e98dd13f-71bd-470a-98a8-554350877ad1"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3030ed83-dc9c-44f5-beae-43169aabc8ce"
+                },
+                {
+                  "group": "left",
+                  "id": "87e28e95-a155-4e23-bfd3-dcee316fbfb6"
+                }
+              ]
+            },
+            "id": "830a7642-6064-4f3e-9551-77984b565307",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E2 - Operador /\n Administrador",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "2bbbbb9d-7790-4868-af90-3de832e0a149",
+                  "title": "T-20 [Medio] Suplantación de operador por credenciales compartidas",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Uso de credenciales compartidas permite suplantar a un operador.",
+                  "mitigation": "C-01 MFA y vinculación de dispositivo, C-14 PAM y segregación de funciones",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "4"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": -540,
+              "y": 60
+            },
+            "size": {
+              "width": 140,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "E3 - Red ACH / \nSwitch interbancario"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 12,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "28c946b3-f36c-448c-89d1-413817aa75a0"
+                },
+                {
+                  "group": "right",
+                  "id": "e98dd13f-71bd-470a-98a8-554350877ad1"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3030ed83-dc9c-44f5-beae-43169aabc8ce"
+                },
+                {
+                  "group": "left",
+                  "id": "87e28e95-a155-4e23-bfd3-dcee316fbfb6"
+                }
+              ]
+            },
+            "id": "7d734fcb-2072-4ab4-bb17-8729694dbb36",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E3 - Red ACH / \nSwitch interbancario",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": -343.75,
+              "y": 180
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "E4 - Proveedor \nOTP/SMS"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 13,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "28c946b3-f36c-448c-89d1-413817aa75a0"
+                },
+                {
+                  "group": "right",
+                  "id": "e98dd13f-71bd-470a-98a8-554350877ad1"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3030ed83-dc9c-44f5-beae-43169aabc8ce"
+                },
+                {
+                  "group": "left",
+                  "id": "87e28e95-a155-4e23-bfd3-dcee316fbfb6"
+                }
+              ]
+            },
+            "id": "586cd34b-876c-4459-94ef-808860a67870",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E4 - Proveedor \nOTP/SMS",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "484fd0d8-ab1b-4bdc-88bf-d7d81194ba31",
+                  "title": "T-08 [Crítico] Intercepción de OTP por SIM swap o malware",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante intercepta el OTP enviado por SMS mediante cambio de SIM, malware o phishing y autoriza operaciones.",
+                  "mitigation": "C-01 MFA resistente a phishing y vinculación de dispositivo, C-17 SIEM/UEBA, migrar OTP por SMS a push/TOTP/FIDO2",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 4,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": -540,
+              "y": 320
+            },
+            "size": {
+              "width": 140,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "E5 - Proveedor KYC"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 14,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "28c946b3-f36c-448c-89d1-413817aa75a0"
+                },
+                {
+                  "group": "right",
+                  "id": "e98dd13f-71bd-470a-98a8-554350877ad1"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3030ed83-dc9c-44f5-beae-43169aabc8ce"
+                },
+                {
+                  "group": "left",
+                  "id": "87e28e95-a155-4e23-bfd3-dcee316fbfb6"
+                }
+              ]
+            },
+            "id": "c8c5d0cb-9b32-4b88-8ee8-3026a1a929d0",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E5 - Proveedor KYC",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": -907.5,
+              "y": 390
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "E6 - Regulador /\nAuditor"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 15,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "28c946b3-f36c-448c-89d1-413817aa75a0"
+                },
+                {
+                  "group": "right",
+                  "id": "e98dd13f-71bd-470a-98a8-554350877ad1"
+                },
+                {
+                  "group": "bottom",
+                  "id": "3030ed83-dc9c-44f5-beae-43169aabc8ce"
+                },
+                {
+                  "group": "left",
+                  "id": "87e28e95-a155-4e23-bfd3-dcee316fbfb6"
+                }
+              ]
+            },
+            "id": "e77d373c-3f07-4999-922f-19f6d265a940",
+            "data": {
+              "type": "tm.Actor",
+              "name": "E6 - Regulador /\nAuditor",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "title": "DFD Nivel 1 - Procesos",
+        "diagramType": "STRIDE",
+        "placeholder": "Descripción de nuevo diagrama STRIDE",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": []
+      },
+      {
+        "id": 2,
+        "title": "DFD Nivel 2 - Transferencias",
+        "diagramType": "STRIDE",
+        "placeholder": "Descripción de nuevo diagrama STRIDE",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": []
+      }
+    ],
+    "diagramTop": 3,
+    "reviewer": "Saul Orozco",
+    "threatTop": 10
+  }
+}
